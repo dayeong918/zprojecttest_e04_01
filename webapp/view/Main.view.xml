@@ -1,0 +1,45 @@
+<mvc:View controllerName="zprojectodatae0401.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:t="sap.ui.table">
+    <Page id="page" title="{i18n>title}">
+        <content />
+        <t:Table
+				rows="{/ConnectionSet}"
+				selectionMode="MultiToggle"
+				visibleRowCount="7"
+				paste="onPaste"
+				ariaLabelledBy="title">
+				<t:extension>
+					<OverflowToolbar style="Clear">
+						<Title id="title" text="Products"/>
+					</OverflowToolbar>
+				</t:extension>
+				<t:columns>                
+					<t:Column width="11rem">
+						<Label text="Carrid" />
+						<t:template>
+							<Text text="{Carrid}" wrapping="false" />
+						</t:template>
+					</t:Column>
+					<t:Column width="6rem" hAlign="End">
+						<Label text="Connid" />
+						<t:template>
+							<Label text="{Connid}" />
+						</t:template>
+					</t:Column>
+					<t:Column width="9rem">
+						<Label text="Countryfr" />
+						<t:template>
+							<Label text="{Countryfr}" />
+						</t:template>
+					</t:Column>
+					<t:Column width="9rem">
+						<Label text="Cityfrom" />
+						<t:template>
+							<Label text="{Cityfrom}" />
+						</t:template>
+					</t:Column>
+				</t:columns>
+			</t:Table>
+    </Page>
+</mvc:View>
